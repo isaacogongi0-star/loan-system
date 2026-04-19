@@ -1,0 +1,25 @@
+<h2>Apply Loan</h2>
+
+<input id="name" placeholder="Full Name"><br><br>
+<input id="email" placeholder="Gmail"><br><br>
+<input id="phone" placeholder="Phone Number"><br><br>
+<input id="amount" placeholder="Amount"><br><br>
+
+<button onclick="apply()">Apply</button>
+
+<script>
+async function apply(){
+  await fetch("http://localhost:5000/apply", {
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({
+      name:name.value,
+      email:email.value,
+      phone:phone.value,
+      amount:amount.value
+    })
+  });
+
+  alert("Application sent");
+}
+</script>
