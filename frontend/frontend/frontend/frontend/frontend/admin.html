@@ -1,0 +1,19 @@
+<h2>Admin Panel</h2>
+
+<div id="list"></div>
+
+<script>
+async function load(){
+  const res = await fetch("http://localhost:5000/loans");
+  const data = await res.json();
+
+  list.innerHTML = data.map(l => `
+    <div>
+      <p>${l.name} - ${l.amount}</p>
+      <p>${l.status}</p>
+    </div>
+  `).join("");
+}
+
+load();
+</script>
