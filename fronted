@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan System</title>
+</head>
+<body>
+
+<h1>💰 Loan Website</h1>
+
+<a href="apply.html">Apply for Loan</a><br><br>
+<a href="admin.html">Admin Panel</a>
+
+</body>
+</html>
