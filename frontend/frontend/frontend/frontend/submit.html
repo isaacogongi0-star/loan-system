@@ -1,0 +1,20 @@
+<h2>Submit MPesa Message</h2>
+
+<textarea id="msg"></textarea><br><br>
+
+<button onclick="send()">Submit</button>
+
+<script>
+async function send(){
+  await fetch("http://localhost:5000/mpesa", {
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({
+      id: 1,
+      mpesa: msg.value
+    })
+  });
+
+  alert("Submitted");
+}
+</script>
